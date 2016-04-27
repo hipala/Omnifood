@@ -21,6 +21,15 @@ html {
     text-rendering: optimizeLegibility;  
 }
 
+.clearfix {zoom:1}  /*解決IE瀏覽器的問題*/
+.clearfix:after {
+    content: ' ';  /*插入生成內容*/
+    clear: both;  /*消除左邊及右邊的浮動*/
+    display: block;
+    height: 0;
+    visibility: hidden;  /*隱藏物件，但物件位置不會消失，display:none則連物件佔的位置一起隱藏*/
+}
+
 /* --------------------------------- */
 /* REUSABLE COMPONMENTS */
 /* --------------------------------- */
@@ -201,8 +210,21 @@ header {
 }
 
 /* --------------------------------- */
+/* FEATURES */
+/* --------------------------------- */
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+
+/* --------------------------------- */
 /* MEALS */
 /* --------------------------------- */
+
+.section-meals {
+    padding: 0;
+}
 
 .meals-showcase {
     list-style: none;  /*設定ul li 或ol li 的項目符號*/
@@ -218,9 +240,70 @@ header {
 .meal-photo {
     width: 100%;
     margin: 0;
+    overflow: hidden;  /*超過的部分隱藏*/
+    background: #000;
 }
 
 .meal-photo img {
+    opacity: 0.7;
     width: 100%;
     height: auto;
+    transform: scale(1.15);  /*等比例放大*/
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.06);
+}
+
+/* --------------------------------- */
+/* HOW IT WORKS*/
+/* --------------------------------- */
+
+.sections-steps {
+    background: #f4f4f4;
+}
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px; 
+}
+
+.steps-box:last-child {  /*注意跟:last-of-type區別*/
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {  /*注意跟:last-child區別*/
+    margin-bottom: 80px;
+}
+
+.works-step div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 8px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
 }
