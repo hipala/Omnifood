@@ -196,6 +196,7 @@ header {
     background-size: cover;  /*背景圖放大至內容的大小*/
     background-position: center; 
     height: 100vh;  /*填滿整個畫面*/
+    background-attachment: fixed;  /*網頁滾動，背景圖案固定不動，默認為scroll*/
 }
 
 .hero-text-box{
@@ -289,7 +290,7 @@ header {
 }
 
 /* --------------------------------- */
-/* HOW IT WORKS*/
+/* HOW IT WORKS */
 /* --------------------------------- */
 
 .section-steps {
@@ -345,7 +346,7 @@ header {
 }
 
 /* --------------------------------- */
-/* CITIES*/
+/* CITIES */
 /* --------------------------------- */
 
 .box img {
@@ -356,4 +357,34 @@ header {
 
 .city-feature {
     margin-bottom: 5px;
+}
+
+/* --------------------------------- */
+/* TESTIMONIALS */
+/* --------------------------------- */
+
+.section-testimonials {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;  /*網頁滾動，背景圖案固定不動，默認為scroll*/
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+    vertical-align: middle;
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
