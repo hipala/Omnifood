@@ -31,7 +31,7 @@ html {
 }
 
 /* --------------------------------- */
-/* REUSABLE COMPONMENTS */
+/* REUSABLE COMPONENTS */
 /* --------------------------------- */
 
 .row {
@@ -108,6 +108,37 @@ h2:after {
     color: #e67e22;
     margin-bottom: 10px;
     text-align: center;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px; 
+
+    /*select to align text and icons*/
+    line-height: 120%;  /*以百分比計算的行高*/
+    vertical-align: middle;  /*元素的垂直對齊方式*/
+    margin-top: -5px;  /*微調行距*/
+}
+
+/* ------ LINKS ------ */
+
+a:link,  /*link表示未訪問、visited表示已訪問*/
+a:visited {
+    color: #e67e22;
+    text-decoration: none;  /*文字裝飾，增加上線overline,底線underline,刪除線line-through*/
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;  /*邊框樣式有solid.double.dotted.dashed*/
+    transition: border-bottom 0.2s, color 0.2s;  /*漸變效果*/
+}
+
+a:hover,  /*hover是滑鼠蓋在連結上效果、active是連結被點擊時的效果*/
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;  /*transparent變透明*/
 }
 
 /* ------ BUTTONS ------ */
@@ -302,8 +333,27 @@ header {
     margin-right: 25px;
 }
 
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
+}
+
 .btn-app img {
     height: 50px;
     width: auto;
     margin-right: 10px;
+}
+
+/* --------------------------------- */
+/* CITIES*/
+/* --------------------------------- */
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature {
+    margin-bottom: 5px;
 }
