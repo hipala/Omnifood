@@ -144,7 +144,8 @@ a:active {
 /* ------ BUTTONS ------ */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -156,7 +157,8 @@ a:active {
 /*按鈕點擊前、後*/
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited, 
+input[type=submit] {
     background-color: #e67e22;
     border: 1px solid #e67e22;
     color: #fff;
@@ -164,7 +166,7 @@ a:active {
 }
 
 .btn-ghost:link,
-.btn-ghost:visited{
+.btn-ghost:visited {
     border: 1px solid #e67e22;
     color: #e67e22;
 }
@@ -172,12 +174,15 @@ a:active {
 /*滑鼠移過按鈕、點下去*/
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
     background-color: #cf6d17;
 }
 
 .btn-full:hover,
-.btn-full:active {
+.btn-full:active,
+input[type=submit] {
     border: 1px solid #cf6d17;
 }
 
@@ -455,4 +460,34 @@ cite img {
 .plan-box ul li {
     padding: 5px  0px;
 }
+
+/* --------------------------------- */
+/* FORM */
+/* --------------------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;  /*左右置中*/
+}
+
+input[type=text],  /*可以這樣指定*/
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;    
+}
+
+input[type=checkbox] {
+    margin: 0px 5px 0px 0px;
+}
+
+*:focus {outline: none;}  /*focus表被選取的焦點元素，取消選取輪廓線*/
+
 
