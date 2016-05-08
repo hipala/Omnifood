@@ -199,7 +199,7 @@ input[type=submit] {
 /* --------------------------------- */
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(img/hero.jpg);  /*圖片上灰色遮罩*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(img/hero-min.jpg);  /*圖片上灰色遮罩*/
     background-size: cover;  /*背景圖放大至內容的大小*/
     background-position: center; 
     height: 100vh;  /*填滿整個畫面*/
@@ -430,7 +430,7 @@ header {
 /* --------------------------------- */
 
 .section-testimonials {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
     background-size: cover;
     color: #fff;
     background-attachment: fixed;  /*網頁滾動，背景圖案固定不動，默認為scroll*/
